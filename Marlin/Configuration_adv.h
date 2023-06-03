@@ -2191,7 +2191,7 @@
 #define BABYSTEPPING
 #if ENABLED(BABYSTEPPING)
   //#define INTEGRATED_BABYSTEPPING         // Integration of babystepping into the Stepper ISR
-  #define EP_BABYSTEPPING                 // M293/M294 babystepping with EMERGENCY_PARSER support
+  //#define EP_BABYSTEPPING                 // M293/M294 babystepping with EMERGENCY_PARSER support
   #define BABYSTEP_WITHOUT_HOMING
   #define BABYSTEP_ALWAYS_AVAILABLE       // Allow babystepping at all times (not just during movement)
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
@@ -2872,11 +2872,11 @@
   #endif
 
   #if AXIS_IS_TMC(X)
-    #define X_CURRENT       630      // (mA) RMS current. Multiply by 1.414 for peak current.
-    #define X_CURRENT_HOME  (X_CURRENT/2)  // (mA) RMS current for sensorless homing
-    #define X_MICROSTEPS   64
-    #define X_RSENSE          0.11
-    #define X_CHAIN_POS      -1
+    #define Y_CURRENT       630      // (mA) RMS current. Multiply by 1.414 for peak current.
+    #define Y_CURRENT_HOME  (X_CURRENT/2)  // (mA) RMS current for sensorless homing
+    #define Y_MICROSTEPS   64
+    #define Y_RSENSE          0.11
+    #define Y_CHAIN_POS      -1
     //#define Y_INTERPOLATE  true
     //#define Y_HOLD_MULTIPLIER 0.5
   #endif
@@ -3116,9 +3116,9 @@
    * Set *_SERIAL_TX_PIN and *_SERIAL_RX_PIN to match for all drivers
    * on the same serial port, either here or in your board's pins file.
    */ 
-  #define  X_SLAVE_ADDRESS 0 //капать сюда
-  #define  Y_SLAVE_ADDRESS 2
-  #define  Z_SLAVE_ADDRESS 1
+  //#define  X_SLAVE_ADDRESS 0 //капать сюда
+  //#define  Y_SLAVE_ADDRESS 2
+  //#define  Z_SLAVE_ADDRESS 1
   //#define X2_SLAVE_ADDRESS 0
   //#define Y2_SLAVE_ADDRESS 0
   //#define Z2_SLAVE_ADDRESS 0
@@ -3130,7 +3130,7 @@
   //#define  U_SLAVE_ADDRESS 0
   //#define  V_SLAVE_ADDRESS 0
   //#define  W_SLAVE_ADDRESS 0
-  #define E0_SLAVE_ADDRESS 3
+  //#define E0_SLAVE_ADDRESS 3
   //#define E1_SLAVE_ADDRESS 0
   //#define E2_SLAVE_ADDRESS 0
   //#define E3_SLAVE_ADDRESS 0
@@ -3156,7 +3156,7 @@
    * Use Trinamic's ultra quiet stepping mode.
    * When disabled, Marlin will use spreadCycle stepping mode.
    */
-  #if TRUE //HAS_STEALTHCHOP //и сюда
+  //#if TRUE //HAS_STEALTHCHOP //и сюда
     #define STEALTHCHOP_XY
     #define STEALTHCHOP_Z
     #define STEALTHCHOP_I
@@ -3166,7 +3166,7 @@
     #define STEALTHCHOP_V
     #define STEALTHCHOP_W
     #define STEALTHCHOP_E
-  #endif
+  //#endif
 
   /**
    * Optimize spreadCycle chopper parameters by using predefined parameter sets
